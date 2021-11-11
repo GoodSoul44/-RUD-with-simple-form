@@ -1265,3 +1265,498 @@ Processing by DogsController#show as HTML
 Completed 200 OK in 27ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 5323)
 
 
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:56:23 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 39.1ms | Allocations: 18601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 24105)
+Completed 200 OK in 64ms (Views: 50.8ms | ActiveRecord: 0.5ms | Allocations: 31441)
+
+
+Started GET "/dogs" for ::1 at 2021-11-11 16:56:25 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2777)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5909)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 6722)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:56:29 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4081)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 7394)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 7865)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:56:56 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 7139)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 8517)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:57:11 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 13563)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 19067)
+Completed 200 OK in 43ms (Views: 29.0ms | ActiveRecord: 0.6ms | Allocations: 26403)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:58:52 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3265)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3350)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 4792)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>Create a Dog</h3>
+
+<%= simple_form_for @dog do |f| %>
+  <%= f.input :name % placeholder: 'Name'%>
+  <%= f.input :motto %>
+  <%= f.button :submit %>
+<% end %>
+):
+1:    <h3>Create a Dog</h3>
+2:    
+3:    <%= simple_form_for @dog do |f| %>
+4:      <%= f.input :name % placeholder: 'Name'%>
+5:      <%= f.input :motto %>
+6:      <%= f.button :submit %>
+7:    <% end %>
+  
+app/views/dogs/new.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/dogs/new.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/dogs/new.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/dogs/new.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/dogs/new.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/dogs/new.html.erb:4: syntax error, unexpected ':', expecting ')'
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:59:12 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4018)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 7142)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 8554)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:59:37 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3930)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 7044)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 8441)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:00:50 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4025)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 7151)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 8570)
+
+
+Started POST "/dogs" for ::1 at 2021-11-11 17:00:54 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"", "motto"=>""}, "commit"=>"Create Dog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["motto", ""], ["created_at", "2021-11-11 15:00:54.619834"], ["updated_at", "2021-11-11 15:00:54.619834"]]
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+Redirected to http://localhost:3000/dogs/8
+Completed 302 Found in 14ms (ActiveRecord: 3.6ms | Allocations: 5535)
+
+
+Started GET "/dogs/8" for ::1 at 2021-11-11 17:00:54 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3265)
+Completed 200 OK in 17ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 6975)
+
+
+Started DELETE "/dogs/8" for ::1 at 2021-11-11 17:00:57 +0200
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"8"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 14ms (ActiveRecord: 4.8ms | Allocations: 4490)
+
+
+Started GET "/dogs" for ::1 at 2021-11-11 17:00:57 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2087)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4923)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 5512)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:01:00 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7014)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 7483)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:02:40 +0200
+Processing by DogsController#new as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1228)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/dog.rb:2:in `<class:Dog>'
+app/models/dog.rb:1:in `<main>'
+app/controllers/dogs_controller.rb:14:in `new'
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:03:23 +0200
+Processing by DogsController#new as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1521)
+
+
+  
+ArgumentError (Unknown validator: 'MottoValidator'):
+  
+app/models/dog.rb:2:in `<class:Dog>'
+app/models/dog.rb:1:in `<main>'
+app/controllers/dogs_controller.rb:14:in `new'
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:03:24 +0200
+Processing by DogsController#new as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 981)
+
+
+  
+ArgumentError (Unknown validator: 'MottoValidator'):
+  
+app/models/dog.rb:2:in `<class:Dog>'
+app/models/dog.rb:1:in `<main>'
+app/controllers/dogs_controller.rb:14:in `new'
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:03:34 +0200
+Processing by DogsController#new as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 1336)
+
+
+  
+SyntaxError (/home/oleksii/Documents/CRUD/CRUD-with-simple-form/app/models/dog.rb:2: syntax error, unexpected ':', expecting `end'
+  validates :name: true
+                 ^
+):
+  
+app/models/dog.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/dog.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/dog.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/dogs_controller.rb:14:in `new'
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:03:46 +0200
+Processing by DogsController#new as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1539)
+
+
+  
+ArgumentError (Unknown validator: 'PresentsValidator'):
+  
+app/models/dog.rb:2:in `<class:Dog>'
+app/models/dog.rb:1:in `<main>'
+app/controllers/dogs_controller.rb:14:in `new'
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:03:56 +0200
+Processing by DogsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/dogs_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 7154)
+Completed 200 OK in 28ms (Views: 18.9ms | ActiveRecord: 0.8ms | Allocations: 11986)
+
+
+Started POST "/dogs" for ::1 at 2021-11-11 17:03:59 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"s", "motto"=>""}, "commit"=>"Create Dog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mDog Create (0.9ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "s"], ["motto", ""], ["created_at", "2021-11-11 15:03:59.346252"], ["updated_at", "2021-11-11 15:03:59.346252"]]
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+Redirected to http://localhost:3000/dogs/9
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms | Allocations: 3499)
+
+
+Started GET "/dogs/9" for ::1 at 2021-11-11 17:03:59 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2971)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 4249)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:04:00 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6313)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 6776)
+
+
+Started POST "/dogs" for ::1 at 2021-11-11 17:04:02 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"", "motto"=>""}, "commit"=>"Create Dog"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1278)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"dogs", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/dogs_controller.rb:20:in `create'
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:04:07 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 6343)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 6805)
+
+
+Started POST "/dogs" for ::1 at 2021-11-11 17:04:55 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"", "motto"=>""}, "commit"=>"Create Dog"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1204)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"dogs", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/dogs_controller.rb:20:in `create'
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:04:57 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 6343)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 6806)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:08:09 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 19.0ms | Allocations: 13506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 19010)
+Completed 200 OK in 46ms (Views: 31.1ms | ActiveRecord: 0.6ms | Allocations: 26443)
+
+
+Started POST "/dogs" for ::1 at 2021-11-11 17:08:18 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"Sdfd", "motto"=>"sdasd"}, "commit"=>"Create Dog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sdfd"], ["motto", "sdasd"], ["created_at", "2021-11-11 15:08:18.604457"], ["updated_at", "2021-11-11 15:08:18.604457"]]
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+Redirected to http://localhost:3000/dogs/10
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms | Allocations: 5061)
+
+
+Started GET "/dogs/10" for ::1 at 2021-11-11 17:08:18 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3325)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 5404)
+
+
+Started DELETE "/dogs/10" for ::1 at 2021-11-11 17:08:21 +0200
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"10"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 14ms (ActiveRecord: 3.2ms | Allocations: 4880)
+
+
+Started GET "/dogs" for ::1 at 2021-11-11 17:08:21 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2301)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 5148)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 5743)
+
+
+Started GET "/dogs" for ::1 at 2021-11-11 17:11:50 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5994)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 11568)
+Completed 200 OK in 32ms (Views: 21.8ms | ActiveRecord: 0.7ms | Allocations: 15846)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:11:52 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 13802)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 16696)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 17494)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:12:52 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6994)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 8435)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:18:10 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3267)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3352)
+Completed 500 Internal Server Error in 10ms (Allocations: 4729)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>Create a Dog</h3>
+
+<%= simple_form_for (@dog, wrapper: :horizontal_form) do |f| %>
+  <%= f.input :name, placeholder: 'Name',  required: true%>
+  <%= f.input :motto, placeholder: 'Motto', required: true %>
+  <%= f.button :submit %>
+<% end %>
+):
+1:    <h3>Create a Dog</h3>
+2:    
+3:    <%= simple_form_for (@dog, wrapper: :horizontal_form) do |f| %>
+4:      <%= f.input :name, placeholder: 'Name',  required: true%>
+5:      <%= f.input :motto, placeholder: 'Motto', required: true %>
+6:      <%= f.button :submit %>
+7:    <% end %>
+  
+app/views/dogs/new.html.erb:3: syntax error, unexpected label, expecting '='
+app/views/dogs/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/dogs/new.html.erb:3: syntax error, unexpected label, expecting '='
+app/views/dogs/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/dogs/new.html.erb:3: syntax error, unexpected label, expecting '='
+app/views/dogs/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/dogs/new.html.erb:3: syntax error, unexpected label, expecting '='
+app/views/dogs/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/dogs/new.html.erb:3: syntax error, unexpected label, expecting '='
+app/views/dogs/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/dogs/new.html.erb:3: syntax error, unexpected label, expecting '='
+app/views/dogs/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:18:49 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7087)
+Completed 200 OK in 20ms (Views: 15.1ms | Allocations: 8493)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:21:46 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3912)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7035)
+Completed 200 OK in 16ms (Views: 14.6ms | Allocations: 8440)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 17:22:02 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6238)
+Completed 200 OK in 13ms (Views: 12.6ms | Allocations: 6752)
+
+

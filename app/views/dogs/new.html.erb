@@ -1,12 +1,7 @@
 <h3>Create a Dog</h3>
-<%= form_with model: @dog do |form| %>
-  <%= form.text_field :name, placeholder: "name" %>
-  <%= form.text_field :motto, placeholder: "motto" %>
-  <%= form.submit %>
-<% end %>
 
-<!-- <%= form_for @dog do |form| %>
-  <%= form.text_field :name, placeholder: 'name' %>
-  <%= form.text_field :motto, placeholder: 'motto' %>
-  <%= form.submit %>
-<% end %> -->
+<%= simple_form_for(@dog, wrapper: :horizontal_form) do |f| %>
+  <%= f.input :name, placeholder: 'Name',  required: true%>
+  <%= f.input :motto, placeholder: 'Motto', required: true %>
+  <%= f.button :submit %>
+<% end %>
