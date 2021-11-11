@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/bin/node /usr/local/bin/yarn add webpack@^4.46.0 webpack-cli@^3.3.12
+
+PATH: 
+  /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/bin:/home/oleksii/.rbenv/versions/3.0.2/bin:/home/oleksii/.rbenv/libexec:/home/oleksii/.rbenv/plugins/ruby-build/bin:/home/oleksii/.rbenv/shims:/home/oleksii/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  10.19.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ENETUNREACH 2606:4700::6810:1423:443 - Local (:::0)
+      at internalConnect (net.js:882:16)
+      at defaultTriggerAsyncIdScope (internal/async_hooks.js:294:19)
+      at emitLookup (net.js:1029:9)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:107677:29
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:107523:25
+      at RawTask.module.exports.RawTask.call (/usr/local/lib/node_modules/yarn/lib/cli.js:83655:19)
+      at flush (/usr/local/lib/node_modules/yarn/lib/cli.js:83737:29)
+      at process._tickCallback (internal/process/next_tick.js:61:11)
+
+npm manifest: 
+  {
+    "name": "dog-app",
+    "private": true,
+    "dependencies": {
+      "@rails/ujs": "^6.0.0",
+      "turbolinks": "^5.2.0",
+      "@rails/activestorage": "^6.0.0",
+      "@rails/actioncable": "^6.0.0"
+    },
+    "version": "0.1.0"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

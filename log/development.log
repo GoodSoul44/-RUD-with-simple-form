@@ -1,0 +1,1267 @@
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDogs (20211110162729)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "dogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "motto" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211110162729"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-10 16:31:48.750746"], ["updated_at", "2021-11-10 16:31:48.750746"]]
+  [1m[36mTRANSACTION (36.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nala"], ["motto", "Born to be wild"], ["created_at", "2021-11-10 16:37:32.376297"], ["updated_at", "2021-11-10 16:37:32.376297"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alex"], ["motto", "Calm as can be"], ["created_at", "2021-11-10 16:37:32.384150"], ["updated_at", "2021-11-10 16:37:32.384150"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Leroy"], ["motto", "Life of the pawty"], ["created_at", "2021-11-10 16:37:32.389980"], ["updated_at", "2021-11-10 16:37:32.389980"]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.3ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Belle"], ["motto", "Miss Independent"], ["created_at", "2021-11-10 16:37:32.401005"], ["updated_at", "2021-11-10 16:37:32.401005"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+Started GET "/" for 127.0.0.1 at 2021-11-10 18:40:36 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 599)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 4748)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-10 18:40:39 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 265)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 1179)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:40:50 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.5ms | Allocations: 51)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 487)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:40:54 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 49)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:25 +0200
+Started GET "/" for ::1 at 2021-11-10 18:42:25 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 50)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 415)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:25 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:35 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 494)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3625)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:35 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.2ms | Allocations: 638)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 1817)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:36 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 50)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 463)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:37 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 50)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 415)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:37 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 411)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:42:37 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/dog/index" for ::1 at 2021-11-10 18:43:12 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/dog/index"):
+  
+Started GET "/dogs/index" for ::1 at 2021-11-10 18:43:18 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.17
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1938.5ms | Allocations: 15154)
+Completed 500 Internal Server Error in 1941ms (ActiveRecord: 0.0ms | Allocations: 16552)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/oleksii/Documents/CRUD/dog-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/dogs" for ::1 at 2021-11-10 18:43:47 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4364)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.17
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1923.8ms | Allocations: 9113)
+Completed 500 Internal Server Error in 1934ms (ActiveRecord: 0.7ms | Allocations: 11918)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/oleksii/Documents/CRUD/dog-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2021-11-10 18:44:10 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 52)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 450)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-10 18:44:11 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:52:58 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.9ms | Allocations: 494)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3625)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 18:53:06 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4561)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.17
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1954.1ms | Allocations: 12392)
+Completed 500 Internal Server Error in 1958ms (ActiveRecord: 0.7ms | Allocations: 14435)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/oleksii/Documents/CRUD/dog-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2021-11-10 18:53:18 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 264)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1111)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:55:07 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 494)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3625)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:55:07 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 279)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 1249)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:55:08 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 50)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 463)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:55:08 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/" for ::1 at 2021-11-10 18:55:08 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 411)
+
+
+Started GET "/index" for ::1 at 2021-11-10 18:55:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/dogs/index" for ::1 at 2021-11-10 18:55:39 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 8122)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 8232)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms | Allocations: 10224)
+
+
+  
+ActionView::Template::Error (undefined method `dog_path' for #<ActionView::Base:0x00000000007e90>
+Did you mean?  dogs_new_path):
+    1: <ul>
+    2:   <% @dogs.each do |dog| %>
+    3:     <li><%= link_to dog.name, dog_path(dog)  %></li>
+    4:   <% end %>
+    5: </ul>
+  
+app/views/dogs/index.html.erb:3
+app/views/dogs/index.html.erb:2
+Started GET "/dogs/index" for ::1 at 2021-11-10 18:56:44 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 359)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.17
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1928.2ms | Allocations: 8285)
+Completed 500 Internal Server Error in 1938ms (ActiveRecord: 0.0ms | Allocations: 11771)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/oleksii/Documents/CRUD/dog-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/dogs" for ::1 at 2021-11-10 18:57:04 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4371)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.17
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1940.9ms | Allocations: 9169)
+Completed 500 Internal Server Error in 1944ms (ActiveRecord: 0.9ms | Allocations: 10383)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/oleksii/Documents/CRUD/dog-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/dogs/index" for ::1 at 2021-11-10 19:01:00 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 359)
+[Webpacker] Compiling...
+Started GET "/dogs/index" for ::1 at 2021-11-10 19:01:02 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/oleksii/Documents/CRUD/dog-app/public/packs
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 2097ms
+Built at: 11/10/2021 7:01:05 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 5024.0ms | Allocations: 12653)
+Completed 200 OK in 5034ms (Views: 5026.5ms | ActiveRecord: 0.0ms | Allocations: 16181)
+
+
+[Webpacker] Compiled all packs in /home/oleksii/Documents/CRUD/dog-app/public/packs
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 1109ms
+Built at: 11/10/2021 7:01:06 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 4048.8ms | Allocations: 7417)
+Completed 200 OK in 4050ms (Views: 4049.4ms | ActiveRecord: 0.0ms | Allocations: 7904)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:01:12 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 7362)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.7ms | Allocations: 8704)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:03:13 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 10263)
+Completed 200 OK in 30ms (Views: 20.4ms | ActiveRecord: 0.7ms | Allocations: 14497)
+
+
+Started GET "/dogs/show" for ::1 at 2021-11-10 19:03:18 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 2041)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Dog with 'id'=show):
+  
+app/controllers/dogs_controller.rb:7:in `show'
+Started GET "/dogs/" for ::1 at 2021-11-10 19:03:20 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 921)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3905)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4465)
+
+
+Started GET "/dogs/1" for ::1 at 2021-11-10 19:03:22 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 297)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3735)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 4888)
+
+
+Started GET "/dogs/4" for ::1 at 2021-11-10 19:03:30 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3532)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 4537)
+
+
+Started GET "/" for ::1 at 2021-11-10 19:03:56 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.7ms | Allocations: 288)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 1372)
+
+
+Started GET "/dofs" for ::1 at 2021-11-10 19:04:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/dofs"):
+  
+Started GET "/dogs/" for ::1 at 2021-11-10 19:04:04 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4371)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 5721)
+
+
+Started GET "/dogs/2" for ::1 at 2021-11-10 19:04:06 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3050)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 4242)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:05:35 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 815)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3685)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4142)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:05:52 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3675)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4132)
+
+
+Started GET "/dogs/2" for ::1 at 2021-11-10 19:05:53 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2943)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 3930)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:06:14 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4633)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 10266)
+Completed 200 OK in 29ms (Views: 19.8ms | ActiveRecord: 0.7ms | Allocations: 14500)
+
+
+Started GET "/dogs/2" for ::1 at 2021-11-10 19:06:15 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 354)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3358)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 5486)
+
+
+Started DELETE "/dogs/2" for ::1 at 2021-11-10 19:06:17 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for DogsController
+Did you mean?  edit
+               index
+               new
+               show):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/dogs/2" for ::1 at 2021-11-10 19:06:22 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3106)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4283)
+
+
+Started GET "/dogs/2" for ::1 at 2021-11-10 19:06:25 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2953)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 3938)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+Started GET "/dogs/2" for ::1 at 2021-11-10 19:11:26 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6325)
+Completed 200 OK in 31ms (Views: 13.5ms | ActiveRecord: 0.7ms | Allocations: 15121)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:11:28 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4111)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 4856)
+
+
+Started GET "/dogs/1" for ::1 at 2021-11-10 19:11:29 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2954)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 3968)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:12:55 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2033)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5246)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 6575)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:12:56 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1573)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4421)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 4945)
+
+
+Started GET "/dogs/1" for ::1 at 2021-11-10 19:12:59 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3042)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4183)
+
+
+Started GET "/dogs/1/edit" for ::1 at 2021-11-10 19:13:01 +0200
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2947)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3494)
+
+
+Started GET "/dogs/" for ::1 at 2021-11-10 19:13:02 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4400)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 4855)
+
+
+Started DELETE "/dogs/1" for ::1 at 2021-11-10 19:13:05 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for DogsController
+Did you mean?  index
+               create
+               new
+               show):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/dogs/" for ::1 at 2021-11-10 19:13:07 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4649)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 5196)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-10 19:13:08 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 7330)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 7986)
+
+
+Started POST "/dogs" for ::1 at 2021-11-10 19:13:11 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"dfdf", "motto"=>"dsfsdfsdf"}, "commit"=>"Create Dog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:15:in `create'
+  [1m[36mDog Create (3.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "dfdf"], ["motto", "dsfsdfsdf"], ["created_at", "2021-11-10 17:13:11.694288"], ["updated_at", "2021-11-10 17:13:11.694288"]]
+  ↳ app/controllers/dogs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:15:in `create'
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 15ms (ActiveRecord: 6.0ms | Allocations: 5422)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:13:11 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1812)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4649)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.2ms | Allocations: 5135)
+
+
+Started GET "/dogs/5" for ::1 at 2021-11-10 19:13:12 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3409)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4521)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:15:15 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/dogs/index.html.erb:2
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5642)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 8844)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 1.0ms | Allocations: 10851)
+
+
+Started GET "/dogs/1" for ::1 at 2021-11-10 19:15:16 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3729)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 5122)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:15:28 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5436)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 6764)
+
+
+Started GET "/dogs/1" for ::1 at 2021-11-10 19:15:29 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3079)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4270)
+
+
+Started GET "/dogs/1/edit" for ::1 at 2021-11-10 19:15:32 +0200
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 719)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3555)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4670)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:15:33 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4611)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.1ms | Allocations: 5068)
+
+
+Started DELETE "/dogs/1" for ::1 at 2021-11-10 19:15:35 +0200
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:33:in `destroy'
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/dogs_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:33:in `destroy'
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 25ms (ActiveRecord: 4.0ms | Allocations: 4867)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:15:35 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4411)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 4867)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:17:39 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/dogs/index.html.erb:2
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 8198)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 1.1ms | Allocations: 9588)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:17:40 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4400)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 4912)
+
+
+Started GET "/dogs/3" for ::1 at 2021-11-10 19:17:41 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3617)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 4828)
+
+
+Started DELETE "/dogs/3" for ::1 at 2021-11-10 19:17:43 +0200
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+  [1m[36mDog Destroy (0.5ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34:in `destroy'
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 56ms (ActiveRecord: 41.6ms | Allocations: 4803)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:17:43 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4199)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 4660)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-10 19:17:46 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4413)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 5043)
+
+
+Started POST "/dogs" for ::1 at 2021-11-10 19:17:52 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"Pasha", "motto"=>"Kuzyk"}, "commit"=>"Create Dog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mDog Create (1.7ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pasha"], ["motto", "Kuzyk"], ["created_at", "2021-11-10 17:17:52.475863"], ["updated_at", "2021-11-10 17:17:52.475863"]]
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (41.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+Redirected to http://localhost:3000/dogs/6
+Completed 302 Found in 52ms (ActiveRecord: 43.2ms | Allocations: 4669)
+
+
+Started GET "/dogs/6" for ::1 at 2021-11-10 19:17:52 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2947)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3947)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-10 19:17:56 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 757)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3598)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4061)
+
+
+Started GET "/dogs/6" for ::1 at 2021-11-10 19:17:57 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2952)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 3953)
+
+
+Started GET "/dogs" for ::1 at 2021-11-10 19:18:01 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4400)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 4860)
+
+
+Started GET "/" for ::1 at 2021-11-11 16:12:30 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oleksii/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.2ms | Allocations: 494)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 3747)
+
+
+Started GET "/dogs" for ::1 at 2021-11-11 16:12:33 +0200
+Processing by DogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5339)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 10876)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.8ms | Allocations: 13056)
+
+
+Started GET "/dogs/new" for ::1 at 2021-11-11 16:12:38 +0200
+Processing by DogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 6517)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 7313)
+
+
+Started POST "/dogs" for ::1 at 2021-11-11 16:12:41 +0200
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "dog"=>{"name"=>"13123", "motto"=>"213123"}, "commit"=>"Create Dog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "13123"], ["motto", "213123"], ["created_at", "2021-11-11 14:12:41.159481"], ["updated_at", "2021-11-11 14:12:41.159481"]]
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:18:in `create'
+Redirected to http://localhost:3000/dogs/7
+Completed 302 Found in 13ms (ActiveRecord: 3.7ms | Allocations: 5571)
+
+
+Started GET "/dogs/7" for ::1 at 2021-11-11 16:12:41 +0200
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering layout layouts/application.html.erb
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3322)
+Completed 200 OK in 27ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 5323)
+
+
