@@ -26,7 +26,6 @@ class DogsController < ApplicationController
 
   def update
     @dog.update(dog_params)
-
     redirect_to dog_path(@dog)
   end
 
